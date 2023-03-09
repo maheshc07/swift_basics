@@ -112,5 +112,62 @@ let presidents = ["Bush", "Obama", "Trump", "Biden"]
 let reversePresidents = presidents.reversed()
 print(reversePresidents)
 
+// How to store and find the data in dictionaries
 
+var employee = ["Taylor Swift", "Singer", "Nashville"]
 
+print("Name: \(employee[0])")
+print("Job Title: \(employee[1])")
+print("Location: \(employee[2])")
+
+let employee2 = [
+    "Name":"Taylor Swift",
+    "Job":"Singer",
+    "Location":"Nashville"
+]
+
+print(employee2["Name", default:"Unknown"])
+print(employee2["Job", default:"Unknown"])
+print(employee2["Location", default:"Unknown"])
+
+let olympics = [
+    2012 : "London",
+    2016 : "Rio de Janeiro",
+    2020 : "Tokyo"
+]
+
+print(olympics[2012, default: "Unknown"])
+print(olympics[2016, default: "Unknown"])
+
+var heights = [String: Int]()
+heights["Yao Ming"] = 229
+heights["Shaquille"] = 216
+heights["Lebron"] = 209
+
+print(heights["Lebron", default: 210])
+
+var archEnemies = [String:String]()
+archEnemies["Batman"] = "Joker"
+archEnemies["Superman"] = "Lex Luthor"
+archEnemies["Batman"] = "Penguin"
+
+print(archEnemies["Batman", default: "Joker"])
+
+var cloths = [String: String]()
+cloths["kurta"] = "men"
+cloths["saree"] = "women"
+cloths["diaper"] = "child"
+
+print(cloths["kurta", default: "gents"])
+
+//How to use sets for fast data lookup
+
+let actors = Set([
+    "Upendra",
+    "Upendra",
+    "Shankar Nag",
+    "Anant Nag",
+    "Yash"
+])
+
+print(actors.reversed())
