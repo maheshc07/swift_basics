@@ -50,7 +50,7 @@ var name = "Nicolas Cage"
 name = "John Travolta"
 print(name)
 
-//How to store truth with Booleans
+// How to store truth with Booleans
 var filename = "paris.jpg"
 print(filename.hasSuffix(".jpg"))
 
@@ -66,7 +66,7 @@ print(gameover)
 gameover.toggle()
 print(gameover)
 
-//How to join strings together
+// How to join strings together
 
 var name1 = "Mahesh"
 var name2 = "Chandrashekar"
@@ -160,7 +160,7 @@ cloths["diaper"] = "child"
 
 print(cloths["kurta", default: "gents"])
 
-//How to use sets for fast data lookup
+// How to use sets for fast data lookup
 
 let actors = Set([
     "Upendra",
@@ -171,3 +171,75 @@ let actors = Set([
 ])
 
 print(actors.reversed())
+
+var actress = Set<String>()
+actress.insert("Pallavi")
+actress.insert("Haripriya")
+actress.insert("Ramya")
+actress.insert("Haripriya")
+
+print(actress.sorted())
+
+// How to create and use enums
+
+var selected = "Monday"
+selected = "Tuesday"
+selected = "Wednesday"
+
+print(selected)
+
+enum Weekday {
+    case monday, tuesday, wednesday, thursday, friday
+}
+
+var day = Weekday.monday
+day = .tuesday
+day = .wednesday
+day = .thursday
+
+print(day)
+
+// How to use type annotations
+
+let playerName: String = "Sachin"
+let jerseyNumber: Int = 10
+
+print("Player name is \(playerName) and jersey number is \(jerseyNumber)")
+
+var albums: [String] = ["Mahesh", "Suresh"]
+
+var user: [String: String] = ["id": "@mjmahi90"]
+
+var books: Set<String> = Set([
+    "Reasons",
+    "Tomorrowland",
+    "Wealth"
+])
+
+print(books)
+
+var soda: [String] = ["Coke", "Pepsi", "Irn-Bru"]
+var cities1: [String] = [String]()
+var clues: [String] = []
+var teams = [String]()
+
+enum UIStyle {
+    case light, dark, system
+}
+
+var style = UIStyle.dark
+style = .light
+
+let username: String
+username = "mjmahi90"
+
+var number2: Int = 10
+
+let brands = ["Apple", "Samsung", "OnePlus", "Apple"]
+
+print(brands.count)
+print(brands)
+
+var brands1 = Set(brands)
+print(brands.count)
+print(brands)
