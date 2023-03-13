@@ -243,3 +243,152 @@ print(brands)
 var brands1 = Set(brands)
 print(brands.count)
 print(brands)
+
+// How to check a condition is true or false
+
+let score1 = 90
+
+if score1 > 80 {
+    print("Great Job!!")
+}
+
+let speed = 88
+let percentage = 85
+let age1 = 18
+
+if speed >= 88 {
+    print("Where we're going, we don't need roads")
+}
+
+if percentage < 85 {
+    print("You are failed")
+}
+
+if age1 >= 18 {
+    print("You are eligible to vote")
+}
+
+let ourName = "Mahesh Chandrashekar"
+let friendName = "Rohit Karunakar"
+
+if ourName > friendName {
+    print("Its \(ourName) vs \(friendName)")
+}
+
+if ourName < friendName {
+    print("Its \(friendName) vs \(ourName)")
+}
+
+var numbers1 = [1,2,3]
+numbers1.append(4)
+numbers1.append(5)
+
+if numbers1.count > 3 {
+    numbers1.remove(at: 0)
+}
+
+print(numbers1)
+
+let country = "Canada"
+
+if country == "Australia" {
+    print("Good Day")
+} else {
+    print("Very Good day")
+}
+
+let name4 = "Taylor Swift"
+
+if name4 != "Anonymous" {
+    print("Hello \(name4)")
+}
+
+var username1 = "mahesh7c7"
+
+if username1.isEmpty == true {
+    username1 = "Anonymous"
+}
+    
+print("Username is \(username1)")
+
+let myAge = 65
+
+if myAge >= 18 && myAge <= 65{
+    print("You can vote in the next election")
+} else if myAge >= 65 {
+    print("You are too old to vote")
+} else {
+    print("You are too young to vode")
+}
+
+enum Transportation {
+    case airplane, helicopter, bike, car, escooter
+}
+
+let transport = Transportation.bike
+
+if transport == .airplane || transport == .helicopter {
+    print("Lets fly")
+} else if transport == .bike {
+    print("Require parking for the bike")
+} else if transport == .car {
+    print("Time to get stuck in traffic")
+} else {
+    print("Time to hire a scooter")
+}
+
+enum temp {
+    case sun, rain, wind, snow, water
+}
+
+var forecast = temp.sun
+forecast = .rain
+
+switch forecast {
+case .sun:
+    print("It should be nice day")
+case .rain:
+    print("Pack an umbrella")
+case .wind:
+    print("Wear something warm")
+case .snow:
+    print("School is cancelled")
+case .water:
+    print("Our forecast is broken")
+}
+
+var place = "Gotham"
+place = "New York"
+
+switch place {
+case "Gotham":
+    print("Im Batman")
+case "London":
+    print("Im Spiderman")
+case "New York":
+    print("Im Ironman")
+default:
+    print("Who are you?")
+}
+
+let date = 5
+print("My friend gave me ")
+
+switch date {
+case 5:
+    print("5 golden rings")
+    fallthrough
+case 4:
+    print("4 humming birds")
+    fallthrough
+case 3:
+    print("3 french hens")
+    fallthrough
+case 2:
+    print("2 turtle doves")
+    fallthrough
+default:
+    print("A partrige in the pear tree")
+}
+
+    
