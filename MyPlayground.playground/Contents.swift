@@ -391,4 +391,26 @@ default:
     print("A partrige in the pear tree")
 }
 
-    
+let age2 = 17
+
+let canVote = age2 >= 18 ? "vote" : "Dont vote"
+print(canVote)
+
+let hour = 12
+
+print(hour < 12 ? "Good Morning" : "Good Afternoon")
+
+let names = ["James", "Kaylee", "Mal"]
+let crewCount = names.isEmpty ? "No one" :"\(names.count) people"
+print(crewCount)
+
+enum Theme {
+    case dark, light
+}
+
+let theme = Theme.light
+let background = theme == .dark ? "black" : "white"
+print(background)
+
+
+
