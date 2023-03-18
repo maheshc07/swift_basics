@@ -597,7 +597,5 @@ func getUser3() -> (firstName: String, lastName: String) {
 }
 
 let (firstName, lastName) = getUser3()
-//let firstName = getUser3().firstName
-//let lastName = getUser3().lastName
 
 print("Name: \(firstName) \(lastName)")
