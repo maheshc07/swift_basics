@@ -511,5 +511,93 @@ for i in 1...100 {
     }
 }
 
+// How to resue code with functions
+
+func showWelcome() {
+    print("Welcome to the app!")
+    print("By default this prints out a conversation")
+    print("chart from centimeters to inches, but you")
+    print("can also set a custom range if your want")
+}
+
+showWelcome()
 
 
+
+func rollDice(roll1: Int) {
+    if roll1.isMultiple(of: 2) {
+        print("even")
+    } else {
+        print("odd")
+    }
+}
+
+let rollNum = Int.random(in: 1...20)
+rollDice(roll1: rollNum)
+
+func printTimesTable(number: Int, end: Int) {
+    for i in 1...end {
+        print("\(i) * \(number) = \(i*number)")
+    }
+}
+
+printTimesTable(number: 13, end: 20)
+
+func twoNumbers(str1: String, str2: String) -> Bool {
+    let first = str1.sorted()
+    let second = str2.sorted()
+    return first == second
+}
+
+// How to return values from functions
+
+var bool = twoNumbers(str1: "Mahesh", str2: "eshMa")
+print(bool)
+
+func rollDice() -> Int {
+    return Int.random(in: 1...10)
+}
+
+let result1 = rollDice()
+print(result1)
+
+func pythagoras(a: Double, b: Double) -> Double{
+    return sqrt(a * a + b * b)
+}
+
+var c1 = pythagoras(a: 3, b: 4)
+print(c1)
+
+func sayHello() -> String {
+    return "Hello World"
+}
+
+print(sayHello())
+
+// How to return multiple values for functions
+
+func getUser1() -> [String] {
+    ["Taylor","Swift"]
+}
+
+var user1 = getUser1()
+print("Name: \(user1[0]) \(user1[1])")
+
+func getUser2() -> [String: String] {
+    ["firstName":"Taylor", "lastName":"Swift"]
+}
+
+var user2 = getUser2()
+print("Name: \(user2["firstName", default: "?"]) \(user2["lastName", default: "?"])")
+
+// Tuples
+
+func getUser3() -> (firstName: String, lastName: String) {
+    (firstName: "Taylor", lastName: "Swift")
+}
+
+let (firstName, lastName) = getUser3()
+//let firstName = getUser3().firstName
+//let lastName = getUser3().lastName
+
+print("Name: \(firstName) \(lastName)")
