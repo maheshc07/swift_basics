@@ -391,6 +391,8 @@ default:
     print("A partrige in the pear tree")
 }
 
+//How to use ternary conditional operator
+
 let age2 = 17
 
 let canVote = age2 >= 18 ? "vote" : "Dont vote"
@@ -411,6 +413,103 @@ enum Theme {
 let theme = Theme.light
 let background = theme == .dark ? "black" : "white"
 print(background)
+
+// How to use a for loop to repeat work
+
+var platforms = ["iOS", "macOS", "tvOS", "watchOS"]
+
+for os in platforms {
+    print("Swift works fine with \(os)")
+}
+
+for platform in platforms {
+    print("Swift works fine with \(platform)")
+}
+
+for i in 1...12 {
+    print("The \(i) table \n")
+    for j in 1...12 {
+        print("\(i) * \(j) = \(i*j)")
+    }
+    print()
+}
+
+for i in 1...5 {
+    print("Counting from 1 through 5: \(i)")
+}
+
+print()
+
+for i in 1..<5 {
+    print("Counting from 1 up to 5: \(i)")
+}
+
+var lyric = "Haters gone"
+
+for _ in 1...5 {
+    lyric += " hate"
+}
+print(lyric)
+
+// How to use a while loop to repeat work
+
+var countdown = 10
+
+while countdown > 0 {
+    print(countdown)
+    countdown -= 1
+}
+ print("Blast off")
+
+var roll = 0
+
+while roll != 10 {
+    roll = Int.random(in: 0...10)
+    print("The roll number is \(roll)")
+}
+
+print("Critical Hit!!!")
+
+// How to skip loop items with break and continue
+
+var files = ["file.jpg", "file1.pdf", "file2.jpg"]
+
+for file in files {
+    if file.hasSuffix(".jpg") == false {
+        continue
+    }
+        print("Found Picture: \(file)")
+}
+
+let num = 4
+let num1 = 14
+var multiples = [Int]()
+
+for i in 1...100_000 {
+    if i.isMultiple(of: num) && i.isMultiple(of: num1) {
+        multiples.append(i)
+        
+        if multiples.count == 10 {
+            break
+        }
+    }
+}
+
+print(multiples)
+
+// Checkpoint
+
+for i in 1...100 {
+    if i.isMultiple(of: 3) && i.isMultiple(of: 5) {
+        print("FizzBuzz")
+    } else if i.isMultiple(of: 3) {
+        print("Fizz")
+    } else if i.isMultiple(of: 5) {
+        print("Buzz")
+    } else {
+        print(i)
+    }
+}
 
 
 
