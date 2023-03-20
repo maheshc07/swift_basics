@@ -599,3 +599,91 @@ func getUser3() -> (firstName: String, lastName: String) {
 let (firstName, lastName) = getUser3()
 
 print("Name: \(firstName) \(lastName)")
+
+// How to customize parameter labels
+
+func printTimeTable(for number: Int) {
+    for i in 1...12 {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+
+printTimeTable(for: 5)
+
+func printTimesTables(for number: Int, end: Int = 12) {
+    for i in 1...end {
+        print("\(i) x \(number) = \(i * number)")
+    }
+}
+
+printTimesTables(for: 5, end: 20)
+printTimesTables(for: 6)
+
+var characters = ["Mahesh","Suresh", "Ramesh", "Umesh"]
+print(characters.count)
+characters.removeAll(keepingCapacity: true)
+print(characters.count)
+
+//How to handle errors in functions
+
+enum PasswordError: Error {
+    case short, obvious
+}
+
+func checkPassword(_ password: String) throws -> String {
+    if password.count < 5 { throw PasswordError.short }
+    if password == "12345" { throw PasswordError.obvious }
+    
+    if password.count < 8 {
+        return "Ok"
+    } else if password.count < 10 {
+        return "Good"
+    } else {
+        return "Excellent"
+    }
+}
+
+let string = "1234567"
+
+do {
+    let result = try checkPassword(string)
+    print(result)
+//} catch PasswordError.short {
+//    print("Please use a longer password")
+//} catch PasswordError.obvious {
+//    print("I have the same combination on my luggage")
+} catch {
+    print("There was an error : \(error.localizedDescription)")
+}
+
+// Checkpoint
+
+enum numberError: Error {
+    case outOfBounds, noRoot
+}
+
+func checkSquareRoot(_ number: Int) throws -> Int {
+    if number < 1 || number > 10000 {
+        throw numberError.outOfBounds
+    }
+    
+    for i in 1...100 {
+        if number == i * i {
+            return i
+        }
+    }
+    throw numberError.noRoot
+}
+
+let integer = 1000000
+do {
+    let result = try checkSquareRoot(integer)
+    print("The square root of \(integer) is \(result)")
+} catch numberError.outOfBounds {
+    print("\(integer) is Index out of bounds error")
+} catch numberError.noRoot {
+    print("\(integer) Number has no root")
+} catch {
+    print("There is a error")
+}
+
