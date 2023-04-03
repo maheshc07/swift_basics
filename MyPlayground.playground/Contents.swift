@@ -687,3 +687,26 @@ do {
     print("There is a error")
 }
 
+// How to create and use closures
+
+func greetUser() {
+    print("Hi there!")
+}
+
+greetUser()
+var greetCopy = greetUser
+greetCopy()
+greetUser()
+
+let sayHello1 = {
+    print("Hello there")
+}
+
+sayHello1()
+
+let sayHello2 = { (name: String) -> String in
+    "Hi \(name)!"
+}
+
+sayHello2("Mahesh")
+
