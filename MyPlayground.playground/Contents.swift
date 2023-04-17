@@ -818,3 +818,45 @@ doImportantWork {
 } third: {
     print("This is the third work")
 }
+
+// How to create your own structs
+
+struct Album {
+    let title: String
+    let artist: String
+    let year: Int
+    
+    func printAlbum() {
+        print("\(title) (\(year)) by \(artist)")
+    }
+}
+
+let red = Album(title: "Red", artist: "Taylor Swift", year: 2012)
+let wings = Album(title: "Wings", artist: "BTS", year: 2016)
+
+red.printAlbum()
+wings.printAlbum()
+
+print(red)
+print(wings)
+
+struct Employee {
+    let name: String
+    var vacationRemaining = 14
+    
+    mutating func takeVacation(days: Int) {
+        if vacationRemaining > days {
+            vacationRemaining -= days
+            print("Im going on vacation!")
+            print("Days remaining: \(vacationRemaining)")
+        } else {
+            print("Oops! There arent enough days remaining")
+        }
+    }
+}
+
+var archer = Employee(name: "Sterling Archer")
+archer.takeVacation(days: 5)
+print(archer.vacationRemaining)
+
+let poovey = Employee(name: "Pam Poovey")
