@@ -860,3 +860,25 @@ archer.takeVacation(days: 5)
 print(archer.vacationRemaining)
 
 let poovey = Employee(name: "Pam Poovey")
+
+// How to compute property values dynamically
+
+struct Employee1 {
+    let name: String
+    var vacationAllocated = 14
+    var vacationTaken = 0
+    
+    var vacationRemaining: Int {
+        get {
+            vacationAllocated - vacationTaken
+        }
+        set {
+            vacationAllocated = vacationTaken + newValue
+        }
+    }
+}
+
+var archer1 = Employee1(name: "Sterling Archer")
+archer1.vacationTaken += 4
+archer1.vacationRemaining = 2
+print(archer1.vacationAllocated)
