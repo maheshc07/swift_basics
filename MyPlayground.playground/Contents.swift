@@ -882,3 +882,16 @@ var archer1 = Employee1(name: "Sterling Archer")
 archer1.vacationTaken += 4
 archer1.vacationRemaining = 2
 print(archer1.vacationAllocated)
+
+struct School {
+    static var studentCount = 0
+    
+    static func add(student: String) {
+        print("\(student) joined the school.")
+        studentCount += 1
+    }
+}
+
+School.add(student: "Mahesh")
+School.add(student: "Nitin")
+print(School.studentCount)
