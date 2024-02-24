@@ -895,3 +895,177 @@ struct School {
 School.add(student: "Mahesh")
 School.add(student: "Nitin")
 print(School.studentCount)
+
+
+var greeting = "Hello, playground"
+
+greeting = "Mahi"
+
+var ages:Set <Int> = [1,23,4,5,5,62,23]
+
+print(ages)
+print(ages.count)
+print(ages.sorted())
+ages.first
+ages.sorted()
+print(ages)
+
+ages.contains(4)
+ages.contains(23)
+
+let devices: [String:String] = ["phone": "iPhone X",
+                                "laptop": "Macbook pro",
+                                "tablet": "iPad",
+                                "desktop": "HP"
+]
+
+print(devices)
+
+func printInstructorName(name: String) {
+    print(name)
+}
+
+printInstructorName(name: "Sean Allen")
+
+func add(firstNumber: Int, to secondNumber: Int) -> Int {
+    let sum = firstNumber + secondNumber
+    return sum
+    
+}
+
+add(firstNumber: 18, to: 20)
+
+var isDarkMode = true
+
+if isDarkMode {
+    print("It is dark mode and amazing")
+} else {
+    print("It is light mode and dull")
+}
+
+var myHighScore = 01
+var yourHighScore = 555
+
+if myHighScore > yourHighScore {
+    print("You win")
+} else {
+    print("I win")
+}
+
+if myHighScore > 500 {
+    print("You are the highest")
+} else if myHighScore > 250 {
+    print("You are above average")
+} else if myHighScore > 100 {
+    print("You are average")
+} else {
+    print("You are last bencher")
+}
+
+var allstars = ["Kohli","Rohit","Jadeja","Sachin","Rahul"]
+allstars.sort()
+for player in allstars where player == "Sachin"{
+    print(player)
+}
+
+for i in 1...10 {
+    print(i)
+}
+
+//var randomInts: [Int] = []
+//for i in 1...10 {
+//    let randomNumber = Int.random(in: 0...25)
+//    print(randomNumber)
+//}
+
+var randomInts: [Int] = []
+for i in 1...10 {
+    let randomNumber = Int.random(in: 1...10)
+    print(randomNumber)
+}
+
+enum Phone: String {
+    case iPhone11Pro
+    case iPhoneSE
+    case pixel
+    case nokia
+}
+
+func selectPhone(on phone: Phone){
+    switch phone {
+    case .iPhone11Pro :
+        print("This is my next phone")
+    case .iPhoneSE :
+        print("I dislike this phone because it is small")
+    case .pixel :
+        print("Hardware is great but android is bad")
+    case .nokia :
+        print("It is unbreakable")
+    }
+}
+
+selectPhone(on: .pixel)
+
+enum Days {
+    case mon, tue, wed, thu, fri, sat, sun
+}
+
+func officeDays(on days: Days){
+    print(days)
+}
+
+officeDays(on: .mon)
+
+var personRank = 50000
+
+func determinePlayerLeague(from rank: Int) {
+    switch personRank {
+    case 0:
+        print("You are nothing")
+    case 1..<50:
+        print("you are in bronze league")
+    case 51..<1000:
+        print("you are in silver league")
+    case 1001..<2500:
+        print("You are in gold league")
+    case 2501..<10000:
+        print("you are in diamond league")
+    default:
+        print("Who the hell are you")
+    }
+}
+
+determinePlayerLeague(from: personRank)
+
+
+
+func decideGrade(marks: Int) {
+    switch(marks){
+    case 1...50:
+        print("Grade C")
+    case 51...100:
+        print("Grade B")
+    case 101...250:
+        print("Grade A")
+    case 251...500:
+        print("Grade A+")
+    default:
+        print("Failed")
+    }
+}
+
+decideGrade(marks: 400)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
