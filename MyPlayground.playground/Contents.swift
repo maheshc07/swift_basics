@@ -308,7 +308,7 @@ var username1 = "mahesh7c7"
 if username1.isEmpty == true {
     username1 = "Anonymous"
 }
-    
+
 print("Username is \(username1)")
 
 let myAge = 65
@@ -459,7 +459,7 @@ while countdown > 0 {
     print(countdown)
     countdown -= 1
 }
- print("Blast off")
+print("Blast off")
 
 var roll = 0
 
@@ -478,7 +478,7 @@ for file in files {
     if file.hasSuffix(".jpg") == false {
         continue
     }
-        print("Found Picture: \(file)")
+    print("Found Picture: \(file)")
 }
 
 let num = 4
@@ -648,10 +648,10 @@ let string = "1234567"
 do {
     let result = try checkPassword(string)
     print(result)
-//} catch PasswordError.short {
-//    print("Please use a longer password")
-//} catch PasswordError.obvious {
-//    print("I have the same combination on my luggage")
+    //} catch PasswordError.short {
+    //    print("Please use a longer password")
+    //} catch PasswordError.obvious {
+    //    print("I have the same combination on my luggage")
 } catch {
     print("There was an error : \(error.localizedDescription)")
 }
@@ -758,7 +758,7 @@ let sorted = team1.sorted {
     } else if $1 == "Suzzane" {
         return false
     }
-        return $0 < $1
+    return $0 < $1
 }
 
 print(captainFirstTeam)
@@ -896,10 +896,9 @@ School.add(student: "Mahesh")
 School.add(student: "Nitin")
 print(School.studentCount)
 
+var greeting1 = "Hello, playground"
 
-var greeting = "Hello, playground"
-
-greeting = "Mahi"
+greeting1 = "Mahi"
 
 var ages:Set <Int> = [1,23,4,5,5,62,23]
 
@@ -1056,16 +1055,159 @@ func decideGrade(marks: Int) {
 
 decideGrade(marks: 400)
 
+func addition(number1: Int, number2: Int){
+    var result:Int
+    result = number1 + number2
+    print(result)
+}
 
+addition(number1: 10, number2: 20)
 
+func subtraction(number1: Int, number2:Int) -> Int {
+    var result:Int
+    result = number1 - number2
+    return result
+}
 
+let resultSub = subtraction(number1: 200, number2: 160)
+print(resultSub)
 
+let numb1:Double = 3400
+let numb2:Double = 300
 
+let sum = numb1 / numb2
 
+if(numb1 == numb2){
+    print("They are equal")
+}else{
+    print("They are not equal")
+}
 
+var isDarkModeOn = true
 
+if !isDarkModeOn {
+    print("It is too bright here")
+}
 
+if(numb1 > numb2 && isDarkModeOn) {
+    print("Number is greater and it is bright   ")
+}
 
+let oldAges = [3,6,9]
+let youngAges = [97,87]
 
+let allAges = oldAges + youngAges
 
+print(allAges)
 
+var agesHigh: [Int] = [21,45, 123 , 234 ,23,89,23,45,66]
+agesHigh.sort()
+
+if let oldestAges = agesHigh.last {
+    print("The oldest age is \(oldestAges)")
+} else {
+    print("There is no oldest age. You dont have students")
+}
+
+class Developer {
+    var name: String?
+    var jobTitle: String?
+    var experience: Int?
+    
+    init(name: String, jobTitle: String, experience: Int) {
+        self.name = name
+        self.jobTitle = jobTitle
+        self.experience = experience
+    }
+    
+    func developerDetails() {
+        print(name, jobTitle, experience)
+    }
+}
+
+let developer2 = Developer(name: "Mahesh", jobTitle: "iOS Developer", experience: 9)
+
+developer2.developerDetails()
+
+class iOSDeveloper: Developer {
+    var favouriteFramework: String?
+    
+    func speakFavouriteFramework() {
+        if let favouriteFramework = favouriteFramework {
+            print(favouriteFramework)
+        }else {
+            print("I dont have a favourite framework")
+        }
+    }
+    
+    override func developerDetails() {
+        print("I am learning new thing and give me power to understand")
+    }
+}
+
+let develop = iOSDeveloper(name: "Mahesh", jobTitle: "Software Engineer", experience: 9)
+develop.favouriteFramework
+develop.developerDetails()
+
+let develop2 = iOSDeveloper(name: "Kiran", jobTitle: "QA Engineer", experience: 5)
+develop2.favouriteFramework = "Swift"
+develop2.speakFavouriteFramework()
+develop2.developerDetails()
+
+class Vehicle {
+    var numberOfWheels: Int
+    
+    init(numberOfWheels: Int) {
+        self.numberOfWheels = numberOfWheels
+    }
+    
+    func drive() {
+        print("Driving...")
+    }
+}
+
+class Car: Vehicle {
+    var brand: String
+    
+    init(brand: String) {
+        self.brand = brand
+        super.init(numberOfWheels: 4)
+    }
+    
+    override func drive() {
+        print("Driving \(brand) car which has \(numberOfWheels) wheels")
+    }
+}
+
+let myCar = Car(brand: "Toyota")
+myCar.drive()
+myCar.numberOfWheels
+
+let myVehicle = Vehicle(numberOfWheels: 5)
+myVehicle.drive()
+
+extension String {
+    
+    func removeExtraSpace() -> String {
+        return components(separatedBy: .whitespaces).joined()
+    }
+}
+
+let alphabet = "A B C D E F"
+print(alphabet.removeExtraSpace())
+
+func challenge() {
+    for i in 1...100 {
+        if (i % 3 == 0) && (i % 5 == 0){
+            print("FizzBuzz")
+        } else if (i % 5 == 0){
+            print("Buzz")
+        } else if (i % 3 == 0) {
+            print("Fizz")
+        } else {
+            print(i)
+        }
+    }
+}
+
+challenge()
